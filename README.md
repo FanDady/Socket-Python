@@ -24,8 +24,8 @@ This repository mainly provides the realization of the communication between the
 
 # How to use
 - Set the hostname and the port ; set the public IP in the client file and set the private IP in the server file  
-![images1](https://github.com/FanDady/blob/Socket-Python/images/1.jpg)  
-![images1](https://github.com/FanDady/blob/Socket-Python/images/2.jpg)
+![images1](https://github.com/FanDady/Socket-Python/tree/master/images/1.jpg)  
+![images1](https://github.com/FanDady/Socket-Python/tree/master/images/2.jpg)
 
 - if need to transfer the file , run the server file firstly in the cloud server  
 ``` python file_server.py```  
