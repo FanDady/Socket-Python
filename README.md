@@ -39,3 +39,7 @@ This repository mainly provides the realization of the communication between the
 ```python camera_client.py```  
 - if need to send the text , run the client file then in the client device  
 ```python text_client.py```
+
+# Results
+![images3](https://github.com/FanDady/Socket-Python/blob/master/images/3.jpg)  
+![images4](https://github.com/FanDady/Socket-Python/blob/master/images/4.jpg)

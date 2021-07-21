@@ -39,7 +39,7 @@ if __name__ == "__main__":
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         # set the cloud server's public IP and open port
-        s.connect(('127.0.0.1', 8080))
+        s.connect(('47.104.88.125', 8080))
 
     except socket.error as msg:
         print(msg)
