@@ -1,6 +1,5 @@
-"""
-the server of receiving any file
-"""
+# coding:UTF-8
+# Author:小范同学
 
 import threading
 import socket
@@ -11,9 +10,10 @@ import time
 
 def socket_service():
     try:
+        # 连接到本机端监听本机特定的端口号
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        s.bind(('127.0.0.1', 8080))
+        s.bind(('xx.xx.xx.xx', 8080))
         s.listen(10)
     except socket.error as msg:
         print(msg)
@@ -21,11 +21,13 @@ def socket_service():
     print('Waiting connection...')
 
     while 1:
+        # 接收文件
         conn, addr = s.accept()
         t = threading.Thread(target=deal_data, args=(conn, addr))
         t.start()
 
 
+# 处理接收的数据
 def deal_data(conn, addr):
     print('Accept new connection from {0}'.format(addr))
     conn.send('Hi, Welcome to the server!'.encode('utf-8'))

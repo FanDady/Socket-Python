@@ -1,6 +1,5 @@
-"""
-open the camera and record ,then save the video and send the file to the cloud server
-"""
+# coding:UTF-8
+# Author:小范同学
 
 import os
 import sys
@@ -9,36 +8,35 @@ import socket
 import struct
 
 if __name__ == "__main__":
-    # set the camera device
-    cap = cv2.VideoCapture(1)
+    # 设置摄像头设备
+    cap = cv2.VideoCapture(0)
 
-    # set the display window and size
+    # 设置摄像头显示的分辨率
     cv2.namedWindow('CAP', cv2.WINDOW_NORMAL)
     cv2.setWindowProperty("CAP", cv2.WND_PROP_FULLSCREEN, cv2.WND_PROP_FULLSCREEN)
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
 
-    # set the encoding format
+    # 设置录制视频的编码格式
     fourcc = cv2.VideoWriter_fourcc('X', 'V', 'I', 'D')
 
-    # set the video's filename and output FPS
+    # 设置录制视频的文件名以及帧率
     out = cv2.VideoWriter('output.avi', fourcc, 30, (1920, 1080))
     while True:
         ret, frame = cap.read()
         out.write(frame)
         cv2.imshow('CAP', frame)
         esc = cv2.waitKey(1)
-        # enter the key 'q' to quit recording
         if esc == ord('q'):
             break
     cap.release()
     out.release()
     cv2.destroyWindow('CAP')
 
-    # client connect to the cloud server
+    # 客户端开始尝试连接云服务器端
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        # set the cloud server's public IP and open port
+        # 设置要连接的云服务器端的公网IP和端口号
         s.connect(('47.104.88.125', 8080))
 
     except socket.error as msg:
@@ -46,17 +44,17 @@ if __name__ == "__main__":
         sys.exit(1)
     print(s.recv(1024))
 
-    # set the file path
+    # 设置要传输视频文件的文件名
     filepath = './output.avi'
 
     if os.path.isfile(filepath):
-        # get the filename and encode with 'UTF-8'
+        # 获取文件名并用UTF-8编码
         file_size = struct.calcsize('128sl')
         head = struct.pack('128sq', os.path.basename(filepath).encode('utf-8'), os.stat(filepath).st_size)
         s.send(head)
         fp = open(filepath, 'rb')
-
-        # send the file
+        # 文件会被拆分成批次进行发送
+        # 进入循环发送文件直到文件发送完毕
         while 1:
             data = fp.read(1024)
             if not data:
