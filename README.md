@@ -37,4 +37,38 @@
   
 ![images3](https://z3.ax1x.com/2021/08/18/fordTU.jpg)  
 
-![images4](https://z3.ax1x.com/2021/08/18/forsp9.jpg)
+![images4](https://z3.ax1x.com/2021/08/18/forsp9.jpg)  
+  
+ <div align="center">
+    <a href="mailto:Yuri.Fanzhiwei@gmail.com">
+        <img src="https://z3.ax1x.com/2021/08/17/f47afP.png" width="3%"/>
+    </a>
+    <img width="3%" />
+    <a href="https://github.com/FanDady">
+        <img src="https://z3.ax1x.com/2021/08/17/f45ZCT.png" width="3%"/>
+    </a>
+    <img width="3%" />
+    <a href="https://twitter.com/ZhiweiFan6">
+        <img src="https://z3.ax1x.com/2021/08/17/f45rIP.png" width="3%"/>
+    </a>
+    <img width="3%" />
+    <a href="https://www.youtube.com/channel/UCGa3AFKcZCt8btPnHVuKzRw">
+        <img src="https://z3.ax1x.com/2021/08/17/f4Ibkt.png" width="3%"/>
+    </a>
+    <img width="3%" />
+    <a href="https://www.facebook.com/profile.php?id=100071474933884">
+        <img src="https://z3.ax1x.com/2021/08/17/f4oSmj.png" width="3%"/>
+    </a>
+    <img width="3%" />
+    <a href="https://weibo.com/u/5869896682/home">
+        <img src="https://z3.ax1x.com/2021/08/17/f4o97n.png" width="3%"/>
+    </a>
+    <img width="3%" />
+    <a href="https://www.zhihu.com/people/fan-zhi-wei-68">
+        <img src="https://z3.ax1x.com/2021/08/17/f4oE1U.png" width="3%"/>
+    </a>
+    <img width="3%" />
+    <a href="https://blog.csdn.net/qq_43711697?spm=1000.2115.3001.5343">
+        <img src="https://z3.ax1x.com/2021/08/17/f47j1K.png" width="3%"/>
+    </a>
+</div>
